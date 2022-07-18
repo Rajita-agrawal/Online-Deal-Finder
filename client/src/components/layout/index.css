@@ -1,0 +1,265 @@
+.list-margin li {
+  margin-right: 10px;
+}
+
+.show-on-med-and-down {
+  display: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .show-on-med-and-down {
+    display: block;
+  }
+}
+.bg{
+  height: 100%;
+  background: linear-gradient(180deg, hsla(0, 62%, 72%, 1) 0%, hsla(41, 88%, 75%, 1) 82%, hsla(0, 0%, 100%, 1) 100%);
+
+}
+.wrow {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.wcolumn {
+  flex: 50%;
+  padding: 10px;
+  height: 20em; /* Should be removed. Only for demonstration */
+}
+.box {
+  padding-left: 2em;
+  padding-right: 2em;
+	position: fixed;
+	top: 80em;
+	transform: rotate(80deg);
+	margin-left: -10em;
+	width: 100%;
+	transform: rotate(45deg);
+}
+
+.wave {
+	position: fixed;
+	top: 0;
+	left: 0;
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 0%;
+  background: #FFFFFF;
+	background-repeat: repeat-x;
+  width: 1600px;
+  height: 1300px;
+  margin-left: -150px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+	transform: rotate(0deg);
+  border-radius: 43%;
+  animation: drift 7000ms infinite linear;
+}
+.wave.-four {
+  animation: drift 120000ms infinite linear;
+	position: fixed;
+	background-color: #F2F2F2;
+  margin-left: -150px;
+}
+.wave.-three {
+  animation: drift 7500ms infinite linear;
+	position: fixed;
+	background-color: #F2F2F2;
+  margin-left: -150px;
+}
+
+.wave.-two {
+  animation: drift 3000ms infinite linear;
+  opacity: .1;
+  background: black;
+	position: fixed;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+}
+
+/*LOADING SPACE*/
+
+.icon {
+  width: 100px;
+  height: 100px;
+  margin: 0 5px;
+}
+
+/*Animation*/
+.icon:nth-child(2) img {-webkit-animation-delay: 0.2s;animation-delay: 0.2s}
+.icon:nth-child(3) img {-webkit-animation-delay: 0.3s;animation-delay: 0.3s}
+.icon:nth-child(4) img {-webkit-animation-delay: 0.4s;animation-delay: 0.4s}
+.icon:nth-child(5) img {-webkit-animation-delay: 0.5s;animation-delay: 0.5s}
+
+.icon img {
+  -webkit-animation: anim 2s ease infinite;
+  animation: anim 2s ease infinite;
+  -webkit-transform: scale(0,0) rotateZ(180deg);
+  transform: scale(0,0) rotateZ(180deg);
+}
+
+@-webkit-keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+@keyframes anim{
+  0% {
+    -webkit-transform: scale(0,0) rotateZ(-90deg);
+    transform: scale(0,0) rotateZ(-90deg);opacity:0
+  }
+  30% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  50% {
+    -webkit-transform: scale(1,1) rotateZ(0deg);
+    transform: scale(1,1) rotateZ(0deg);opacity:1
+  }
+  80% {
+    -webkit-transform: scale(0,0) rotateZ(90deg);
+    transform: scale(0,0) rotateZ(90deg);opacity:0
+  }
+}
+
+.company{
+  padding-top: 1em;
+  text-align: center; 
+  font-size: 3em;  
+  padding-bottom: 0.5em;
+     
+}
+.company p{
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: -5px;
+}
+.company:after {  
+  
+  font-weight: bold;
+  font-size: 1em;
+  text-align: center;  
+  content:'';
+  color:#d34545;
+  animation:write 10s linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes write {
+  1% {
+    content:'';
+  }
+  2% {
+    content:'yo';
+  }
+  3% {
+    content:'your';
+  }
+  4% {
+    content:'your ';
+  }
+  5% {
+    content:'your he';
+  }
+  6% {
+    content:'your help';
+  }
+  7% {
+    content:'your helpin';
+  }
+  8% {
+    content:'your helping';
+  }
+  
+  9% {
+    content:'your helping ha';
+  }
+  10% {
+    content:'your helping hand';
+  }
+  13% {
+    content:'your helping ha';
+  }
+  14% {
+    content:'your helping ';
+  }
+  15% {
+    content:'your helping';
+  }
+  16% {
+    content:'your helpi';
+  }
+  17% {
+    content:'your hel';
+  }
+  18% {
+    content:'your h';
+  }
+  19% {
+    content:'your';
+  }
+  
+  20% {
+    content:'yo';
+  }
+  21% {
+    content:'';
+  }
+  27% {
+    content:'Tr';
+  }
+  28% {
+    content:'Trea';
+  }
+  29% {
+    content:'Treaty';
+  }
+  30% {
+    content:'TreatyDe';
+  }
+  31% {
+    content:'TreatyDeals';
+  }
+  
+  47% {
+    content:'TreatyDeals';
+
+    color:#d34545;
+  }
+  99% {
+    content:'TreatyDeals';
+    color:#000;
+  }
+  100% {
+    color:#000;
+    content:'TreatyDeals';
+  }
+}
